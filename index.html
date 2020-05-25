@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>xrr's homepage</title>
+    <style media="screen">
+      *{
+        margin: auto;
+      }
+      body{
+        background-repeat:no-repeat ;
+        background-size:100% 100%;
+        background-attachment: fixed;
+      }
+      @font-face
+      {
+        font-family: edmond;
+        src: url('font/edmond.ttf');
+      }
+      a{
+        color: blue;
+      }
+      a:active{
+        color: red;
+      }
+      .setting{
+        text-align: right;
+      }
+      .setting img{
+        width: 20px;
+      }
+      .nav{
+        position: fixed;
+        width: 20%;
+        height: 20%;
+        border-style: groove;
+        border-radius: 10px;
+        border-width: thick;
+        margin-left: 2.5% ;
+        margin-top: 10%;
+        background-color: rgba(160, 160, 160, 0.5);
+        overflow:auto;
+      }
+      .nav h1{
+        text-align: center;
+        font-family: "edmond";
+      }
+      .zhuan{
+        position: fixed;
+        width: 20%;
+        height: 20%;
+        border-style: groove;
+        border-radius: 10px;
+        border-width: thick;
+        margin-left: 77.5%;
+        margin-top: 10%;
+        background-color: rgba(160, 160, 160, 0.5);
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .zhuan .gez{
+        height: 100%;
+        display: inline-block;
+        overflow: hidden;
+      }
+      .gez .bof{
+        height: 20%;
+        cursor: pointer;
+        padding-left: 20px;
+      }
+      #wenzi{
+        font-weight: bold;
+        font-size: 1em;
+      }
+      .zhuan img{
+        height: 100%;
+      }
+      .middle{
+        width: 50% ;
+        background-color: rgba(160, 160, 160, 0.5);
+      }
+      #header h1,h2{
+        font-family: "edmond","Times New Roman" ;
+        text-align: center;
+      }
+      #header h1{
+        font-size: 7em;
+        padding-right: 20%;
+        position: relative;
+        top: 40px;
+      }
+      #header h2{
+        font-size: 4em;
+      }
+      .songli p{
+        text-align: center;
+      }
+      #scover{
+        float: right;
+        background-image: linear-gradient(to bottom, grey , white);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        cursor: default;
+      }
+      #slist{
+        float: right;
+        background-image: linear-gradient(to bottom, white , silver);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+      }
+      #song{
+        clear: both;
+        border: 2px silver groove;
+        overflow-x: scroll;
+      }
+      #song2{
+        height: 100%;
+        white-space: nowrap;
+      }
+      #song3{
+        display: none;
+        border: 2px silver groove;
+        clear: both;
+      }
+      #song3text{
+        padding-left: 70%;
+        font-family: "Cambria" ;
+        color: white;
+      }
+      #song img{
+        width: 150px ;
+      }
+      .geq{
+        width: 200px;
+        display: inline-block;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        white-space: nowrap;
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow: hidden;
+        width: 200px;
+        height: 100%;
+      }
+      .ger{
+        background-color: rgba(249, 200, 134, 0.75) ;
+        font-family: "Cambria" ;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        width: 75%;
+        padding-left: 10%;
+      }
+      .ger img{
+        height:15px;
+        float: right;
+        padding-top: 2px;
+        padding-right: 20% ;
+        visibility: hidden;
+      }
+      .ger:hover{
+        background-color: rgba(190, 235, 350, 0.75) !important;
+        cursor: pointer !important;
+      }
+      .ger:active{
+        background-color: rgba(247, 153, 157, 0.75) !important;
+      }
+      #video{
+        clear: both;
+      }
+      #footer{
+        width: 100% ;
+        background-color: silver ;
+        text-align: center;
+      }
+      .sp{
+        display: inline-block;
+      }
+      .sp p{
+        background:#EA7500 ;
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        border: #AE0000 2px solid;
+        color: #AE0000;
+      }
+    </style>
+    <script type="text/javascript">
+    var jingyinkg=1 ;
+      function jingyin(){
+        if(jingyinkg){
+          jingyinkg=0 ;
+          document.querySelector("audio").muted=true ;
+          document.querySelector(".setting img").src="eng/images/nos.png" ;
+          document.querySelector(".setting img").alt="mute:on" ;
+        }
+        else {
+          jingyinkg=1 ;
+          document.querySelector("audio").muted=false ;
+          document.querySelector(".setting img").src="eng/images/yes.png" ;
+          document.querySelector(".setting img").alt="mute:off" ;
+        }
+      }
+      var bognum ;
+      function huanse(number){
+        var gf=document.querySelectorAll(".ger") ;
+        var gg=document.querySelectorAll(".ger img") ;
+        gf[bognum].style.background="rgba(249, 200, 134, 0.75)" ;
+        gg[bognum].style.visibility="hidden" ;
+        bognum=number ;
+        gf[number].style.background="rgba(181, 254, 137, 0.75)" ;
+        gg[number].style.visibility="visible" ;
+      }
+      function suiji(){
+        var ge=document.querySelectorAll(".geq img") ;
+        var i=Math.floor(Math.random()*ge.length) ;
+        var eid=ge[i].alt ;
+        document.querySelector(".zhuan img").src="song_list/"+eid+".jpg" ;
+        document.querySelector(".zhuan audio source").src="song_list/"+eid+".mp3" ;
+        document.getElementById("wenzi").innerHTML=eid ;
+        huanse(i) ;
+        document.querySelector(".zhuan audio").load() ;
+        document.querySelector(".zhuan audio").play() ;
+      }
+      function diange(number){
+        var ge=document.querySelectorAll(".geq img") ;
+        var eid ;
+        for(var i=0;i<ge.length;i++){
+          if(i==number){
+            eid=ge[i].alt ;
+            document.querySelector(".zhuan img").src="song_list/"+eid+".jpg" ;
+            document.querySelector(".zhuan audio source").src="song_list/"+eid+".mp3" ;
+            document.getElementById("wenzi").innerHTML=eid ;
+            huanse(i) ;
+            document.querySelector(".zhuan audio").load() ;
+            document.querySelector(".zhuan audio").play() ;
+          }
+        }
+      }
+      function wqian(){
+        var ge=document.querySelectorAll(".geq img") ;
+        var eid=document.getElementById("wenzi").innerHTML ;
+        var j ;
+        for(var i=0;i<ge.length;i++){
+          if(ge[i].alt==eid){
+            if(i==0)j=ge.length-1 ;
+            else j=i-1 ;
+            document.querySelector(".zhuan img").src="song_list/"+ge[j].alt+".jpg" ;
+            document.querySelector(".zhuan audio source").src="song_list/"+ge[j].alt+".mp3" ;
+            document.getElementById("wenzi").innerHTML=ge[j].alt ;
+            huanse(j) ;
+            document.querySelector(".zhuan audio").load() ;
+            document.querySelector(".zhuan audio").play() ;
+            break ;
+          }
+        }
+      }
+      function whou(){
+        var ge=document.querySelectorAll(".geq img") ;
+        var eid=document.getElementById("wenzi").innerHTML ;
+        var j ;
+        for(var i=0;i<ge.length;i++){
+          if(ge[i].alt==eid){
+            if(i==ge.length-1)j=0 ;
+            else j=i+1 ;
+            document.querySelector(".zhuan img").src="song_list/"+ge[j].alt+".jpg" ;
+            document.querySelector(".zhuan audio source").src="song_list/"+ge[j].alt+".mp3" ;
+            document.getElementById("wenzi").innerHTML=ge[j].alt ;
+            huanse(j) ;
+            document.querySelector(".zhuan audio").load() ;
+            document.querySelector(".zhuan audio").play() ;
+            break ;
+          }
+        }
+      }
+      var zif='' ;
+      var uch='' ;
+      var sxz=0 ;
+      function lur(name){
+        zif+='<div class="geq">\
+          <a href=""><img src="song_list/'+name+'.jpg" alt="'+name+'" onclick="diange('+sxz+');return false;"></a><br />\
+          <caption>'+name+'</caption>\
+        </div>' ;
+        uch+='<div class="ger" onclick="diange('+sxz+')">\
+          '+name+'<img src="eng/images/playin.png">\
+          </div>' ;
+        sxz++ ;
+      }
+      function gedan(){
+        zif='' ;
+        uch='' ;
+        sxz=0 ;
+        lur("A Battle in the Highlands") ;
+        lur("A Cruce Victoria") ;
+        lur("Alba") ;
+        lur("America - The Atomic Era") ;
+        lur("America - The Industrial Era") ;
+        lur("Arabia - The Ancient Era") ;
+        lur("Arabia - The Atomic Era") ;
+        lur("Arabia - The Industrial Era") ;
+        lur("Arabia - The Medieval Era") ;
+        lur("Ceddin Deden") ;
+        lur("China - The Ancient Era") ;
+        lur("China - The Atomic Era") ;
+        lur("China - The Industrial Era") ;
+        lur("China - The Medieval Era") ;
+        lur("Choose Your Path") ;
+        lur("ColorfulCloudsChasingtheMoon2") ;
+        lur("Droopy likes ricochet") ;
+        lur("Droopy likes your face") ;
+        lur("East vs West")
+        lur("England - The Ancient Era") ;
+        lur("England - The Atomic Era") ;
+        lur("England - The Industrial Era") ;
+        lur("England - The Medieval Era") ;
+        lur("France - The Ancient Era") ;
+        lur("France - The Atomic Era") ;
+        lur("France - The Industrial Era") ;
+        lur("France - The Medieval Era") ;
+        lur("Hop")
+        lur("India - The Ancient Era") ;
+        lur("India - The Atomic Era") ;
+        lur("India - The Industrial Era") ;
+        lur("India - The Medieval Era") ;
+        lur("Japan - The Ancient Era") ;
+        lur("Japan - The Atomic Era") ;
+        lur("Japan - The Industrial Era") ;
+        lur("Japan - The Medieval Era") ;
+        lur("Johans Waltz") ;
+        lur("Moog City") ;
+        lur("Ottoman - The Ancient Era") ;
+        lur("Ottoman - The Atomic Era") ;
+        lur("Ottoman - The Industrial Era") ;
+        lur("Ottoman - The Medieval Era") ;
+        lur("Piper, Lead Your Clansmen") ;
+        lur("Rome - The Ancient Era") ;
+        lur("Rome - The Atomic Era") ;
+        lur("Rome - The Industrial Era") ;
+        lur("Rome - The Medieval Era") ;
+        lur("saladinarrivesatjerusalem") ;
+        lur("saladinbesiegejerusalem") ;
+        lur("Scotland - The Ancient Era") ;
+        lur("Scotland - The Atomic Era") ;
+        lur("Scotland - The Industrial Era") ;
+        lur("Scotland - The Medieval Era") ;
+        lur("Scythia - The Ancient Era") ;
+        lur("Scythia - The Atomic Era") ;
+        lur("Scythia - The Industrial Era") ;
+        lur("Scythia - The Medieval Era") ;
+        lur("SongOfJoy") ;
+        lur("Sumeria - The Ancient Era") ;
+        lur("Sumeria - The Atomic Era") ;
+        lur("Sumeria - The Industrial Era") ;
+        lur("Sumeria - The Medieval Era") ;
+        lur("The Coronation") ;
+        lur("The Highland Wanderer") ;
+        lur("Victoria II intro") ;
+        lur("Zulu - The Ancient Era") ;
+        lur("Zulu - The Atomic Era") ;
+        lur("Zulu - The Industrial Era") ;
+        lur("Zulu - The Medieval Era") ;
+        uch+="<div id='song3text'></div>"
+        document.getElementById("song2").innerHTML=zif ;
+        document.getElementById("song3").innerHTML=uch ;
+        var ge=document.querySelectorAll(".geq img") ;
+        var eid="Victoria II intro" ;
+        uch="<p>"+ge.length+" songs in total</p>" ;
+        document.getElementById("song3text").innerHTML=uch ;
+        for(var i=0;i<ge.length;i++){
+          if(ge[i].alt==eid){
+            bognum=i ;
+            huanse(i) ;
+          }
+        }
+      }
+      var qiekg=0 ;
+      function qieh(hao){
+        if(hao==qiekg)return false;
+        if(!qiekg){
+          qiekg=1 ;
+          document.querySelector("#scover").style.background="linear-gradient(to bottom, white , silver)" ;
+          document.querySelector("#scover").style.cursor="pointer" ;
+          document.querySelector("#slist").style.background="linear-gradient(to bottom, grey , white)" ;
+          document.querySelector("#slist").style.cursor="default" ;
+          document.querySelector("#song").style.display="none" ;
+          document.querySelector("#song3").style.display="block" ;
+        }
+        else{
+          qiekg=0 ;
+          document.querySelector("#scover").style.background="linear-gradient(to bottom, grey , white)" ;
+          document.querySelector("#scover").style.cursor="default" ;
+          document.querySelector("#slist").style.background="linear-gradient(to bottom, white , silver)" ;
+          document.querySelector("#slist").style.cursor="pointer" ;
+          document.querySelector("#song").style.display="block" ;
+          document.querySelector("#song3").style.display="none" ;
+        }
+      }
+      var xhj=1 ;
+      function sj_xh(){
+        var fs=document.querySelectorAll(".bof") ;
+        if(xhj){
+          xhj=0 ;
+          fs[1].src="eng/images/fs_sj.png" ;
+          fs[1].alt="play at random" ;
+        }
+        else{
+          xhj=1 ;
+          fs[1].src="eng/images/fs_xh.png" ;
+          fs[1].alt="play in order" ;
+        }
+      }
+      function sj_xh_pd(c){
+        if(xhj){
+          if(c)whou() ;
+          else wqian() ;
+        }
+        else{
+          suiji() ;
+        }
+      }
+    </script>
+  </head>
+  <body background="za/bg.jfif" onload="gedan();">
+    <div class="nav">
+      <h1>Navigation</h1>
+      <ul>
+        <li><a href="#jizu">Recommended Songs</a></li>
+        <li><a href="#video">Recommended Videos</a></li>
+        <li><a href="#game">games</a></li>
+        <li><a href="#personal">Proudly made by myself</a></li>
+        <li><a href="#portal">portal</a></li>
+      </ul>
+    </div>
+    <div class="zhuan">
+      <div class="gez">
+        <img src="song_list/Victoria II intro.jpg" alt="Victoria II intro">
+      </div>
+      <div class="gez">
+        <br />
+        <div id="wenzi">Victoria II intro</div><br />
+        <img class="bof" src="eng/images/qian.png" alt="previous" onclick="sj_xh_pd(0);">
+        <img class="bof" src="eng/images/fs_xh.png" alt="play in order" onclick="sj_xh();">
+        <img class="bof" src="eng/images/hou.png" alt="next"  onclick="sj_xh_pd(1);"><br /><br />
+        <audio style="width:200px;" autoplay controls onended="sj_xh_pd(1);return false;">
+          <source src="song_list/Victoria II intro.mp3" type="audio/mp3">
+        </audio>
+      </div>
+    </div>
+    <div class="middle">
+      <div id="header">
+        <h1>Welcome!</h1>
+        <h2>to xrr's wonderland</h2>
+        <div class="setting">
+          <a href="#" onclick="return false;"><img src="eng/images/yes.png" alt="mute:off" onclick="jingyin();"></a>
+          <a href="index.html">English</a>|<a href="#">繁體中文（尚未開放）</a>
+          <br /><hr /><br />
+        </div>
+      </div>
+      <div class="songli">
+        <p id="jizu">Recommended Songs</p>
+        <div id="slist" onclick="qieh(1);return false;">list</div>
+        <div id="scover" onclick="qieh(0);return false;">cover</div>
+        <div id="song">
+          <div id="song2"></div>
+        </div>
+        <div id="song3"></div>
+      </div>
+      <div id="video">
+        <form class="" action="index.html" method="post">
+          <fieldset>
+            <legend>Recommended Videos</legend>
+            <div class="sp">
+              <a href="https://www.bilibili.com/video/av81128795/"><img src="https://i2.hdslb.com/bfs/archive/c60208ffae790c65b408528bedf8a1dd56cacba6.jpg_320x200.jpg" alt=""></a>
+              <br />
+              <p>Simplified Chinese</p>
+              <p>bilibili</p>
+            </div>
+            <div class="sp">
+              <a href="https://www.bilibili.com/video/av6129716/"><img src="https://i0.hdslb.com/bfs/archive/a7719020765b401f015b4feefd90be8b2c5dab46.jpg_320x200.jpg" alt=""></a>
+              <br />
+              <p>Simplified Chinese</p>
+              <p>bilibili</p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div id="game">
+        <form class="" action="index.html" method="post">
+          <fieldset>
+            <legend>games</legend>
+          </fieldset>
+        </form>
+      </div>
+      <div id="personal">
+        <form class="" action="index.html" method="post">
+          <fieldset>
+            <legend>Proudly made by myself</legend>
+            <div class="sp">
+              <a href="https://www.bilibili.com/video/av81128795/"><img src="https://i2.hdslb.com/bfs/archive/c60208ffae790c65b408528bedf8a1dd56cacba6.jpg_320x200.jpg" alt=""></a>
+              <br />
+              <p>Simplified Chinese</p>
+              <p>bilibili</p>
+            </div>
+            <div class="sp">
+              <a href="https://www.bilibili.com/video/av6129716/"><img src="https://i0.hdslb.com/bfs/archive/a7719020765b401f015b4feefd90be8b2c5dab46.jpg_320x200.jpg" alt=""></a>
+              <br />
+              <p>Simplified Chinese</p>
+              <p>bilibili</p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div id="portal">
+        <form class="" action="index.html" method="post">
+          <fieldset>
+            <legend>portal</legend>
+            <a href="http://www.google.com.hk/">google</a><br />
+            <a href="https://www.cityu.edu.hk/">CityU</a><br />
+            <a href="https://www.cs.cityu.edu.hk/">CS department</a>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div id="footer">
+      <a href="#">about the author</a><br />
+      <a href="eng/updet.html" target="_blank">update details</a>
+    </div>
+  </body>
+</html>

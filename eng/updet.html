@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>update details</title>
+    <style media="screen">
+      .history{
+        display: none;
+      }
+    </style>
+    <script type="text/javascript">
+      var kaiguan=0 ;
+      function zhankai(){
+        if(!kaiguan){
+          kaiguan=1 ;
+          document.querySelector(".history").style.display="block" ;
+          document.querySelector("a").innerHTML="hide history" ;
+        }
+        else{
+          kaiguan=0 ;
+          document.querySelector(".history").style.display="none" ;
+          document.querySelector("a").innerHTML="view history" ;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Update Details</p>
+    <p>===============================</p>
+    <div class="history">
+      <table>
+        <tbody>
+          <tr>
+            <td>update date</td>
+            <td>08/12/2019</td>
+          </tr>
+          <tr>
+            <td>version</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>update contents</td>
+            <td>
+              <ol>
+                <li>the website is accessible</li>
+                <li>outline the structure</li>
+                <li>add "Recommended Songs" function(still not finished)</li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>-------------------------------</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>update date</td>
+            <td>09/12/2019</td>
+          </tr>
+          <tr>
+            <td>version</td>
+            <td>1.0.1</td>
+          </tr>
+          <tr>
+            <td>update contents</td>
+            <td>
+              <ol>
+                <li>songs can be chosen</li>
+                <li>when a song ends, play next song randomly</li>
+                <li>"update details" link can be used</li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>-------------------------------</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>update date</td>
+            <td>20/12/2019</td>
+          </tr>
+          <tr>
+            <td>version</td>
+            <td>1.0.2</td>
+          </tr>
+          <tr>
+            <td>update contents</td>
+            <td>
+              <ol>
+                <li>add more songs</li>
+                <li>"view history" can be used</li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>-------------------------------</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>update date</td>
+            <td>21/12/2019</td>
+          </tr>
+          <tr>
+            <td>version</td>
+            <td>1.0.3</td>
+          </tr>
+          <tr>
+            <td>update contents</td>
+            <td>
+              <ol>
+                <li>optimisation on programming of "Recommended Songs"</li>
+                <li>preset "list" function</li>
+                <li>"previous" "next" can be used</li>
+                <li>mute icon</li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>-------------------------------</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>update date</td>
+            <td>22/12/2019</td>
+          </tr>
+          <tr>
+            <td>version</td>
+            <td>1.0.4</td>
+          </tr>
+          <tr>
+            <td>update contents</td>
+            <td>
+              <ol>
+                <li>"list" basically can be used</li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>===============================</p>
+    <table>
+      <tbody>
+        <tr>
+          <td>update date</td>
+          <td>07/01/2020</td>
+        </tr>
+        <tr>
+          <td>version</td>
+          <td>1.1</td>
+        </tr>
+        <tr>
+          <td>update contents</td>
+          <td>
+            <ol>
+              <li>can play songs at random</li>
+              <li>add more songs</li>
+              <li>statistics of quantity of songs</li>
+              <li>enable "Recommended Videos"</li>
+              <li>enable "Proudly made by myself"</li>
+              <li>add labels</li>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="updetall.html" onclick="zhankai();return false;">view history</a>
+  </body>
+</html>
