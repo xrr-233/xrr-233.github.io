@@ -1,0 +1,16 @@
+body {
+  font-family: TNO, 'Lora', 'Times New Roman', serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: TNO-bold, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: TNO;
+  src: url("../font/FZRuiZHJW_Zhun.TTF");
+}
+
+@font-face {
+  font-family: TNO-bold;
+  src: url("../font/FZRuiZHJW_Zhong.TTF");
+}
