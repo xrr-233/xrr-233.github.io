@@ -17,6 +17,9 @@ author: xrr-233
 
 remote_theme: daattali/beautiful-jekyll@6.0.1
 
+plugins:
+    - jekyll-include-cache
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
@@ -129,7 +132,7 @@ round-avatar: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#EAEAEA"
+#navbar-col: "#EAEAEA"
 navbar-text-col: "#59c7c2"
 navbar-border-col: "#59c7c2"
 page-col: "#061017"
@@ -140,6 +143,7 @@ footer-col: "#061017"
 footer-text-col: "#b2c9c2"
 footer-link-col: "#4008aff"
 footer-hover-col: "#0085a1"
+footer-border-col: "#59c7c2"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
