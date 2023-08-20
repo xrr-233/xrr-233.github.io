@@ -138,11 +138,11 @@ navbar-border-col: "#59c7c2"
 page-col: "#061017"
 text-col: "#b2c9c2"
 link-col: "#008aff"
-hover-col: "#0085a1"
+hover-col: "#ff0000"
 footer-col: "#061017"
 footer-text-col: "#b2c9c2"
 footer-link-col: "#4008aff"
-footer-hover-col: "#0085a1"
+footer-hover-col: "#ff0000"
 footer-border-col: "#59c7c2"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
