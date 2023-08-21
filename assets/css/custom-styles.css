@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 body {
   font-family: TNO, 'Lora', 'Times New Roman', serif;
 }
@@ -13,4 +17,18 @@ h1,h2,h3,h4,h5,h6 {
 @font-face {
   font-family: TNO-bold;
   src: url("../font/FZRuiZHJW_Zhong.TTF");
+}
+
+blockquote {
+  font-family: 'Lora', 'Times New Roman', serif;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: {{ site.navbar-border-col | default: "#59c7c2" }};
+  padding-left: 1em;
+}
+
+.post-preview {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: {{ site.navbar-border-col | default: "#59c7c2" }};
 }
