@@ -1,5 +1,5 @@
 # xrr-233.github.io
-A static website for displaying previous projects
+A static website for displaying previous projects. The website is based on the remote Jekyll theme [Beautiful Jekyll](https://github.com/daattali/beautiful-jekyll).
 
 ## Deployment
 
