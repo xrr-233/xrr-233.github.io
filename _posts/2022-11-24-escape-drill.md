@@ -7,7 +7,7 @@ thumbnail-img: /assets/img/2022-11-24-图片1.png
 
 *Actual post date: 08/23/2023*
 
-*Last modified: 08/23/2023*
+*Last modified: 08/25/2023*
 
 ![](/assets/img/2022-11-24-图片1.png)
 
@@ -39,7 +39,9 @@ In this scene, participant will conduct an escape drill following the crowd to t
 
 ![](/assets/img/2022-11-24-f478fe31abe53e6c972ae52dfb1f90e.png)
 
-To figure out the efficiency of evacuation with respect to the placement of escape sign, we conducted the experiment and collected the movement trajectory as well as the facing direction of the participants by recording the sensing data of the VR device with given high frequency. With these data, by setting the visual range (a pyramidal range within a given distance) of human naked eyes, we can define the effectiveness of a sign by measuring the seen time and the seen area. The seen area is computed by the number of grids in the visual range without any obstacles.
+To figure out the efficiency of evacuation with respect to the placement of escape sign, we conducted the experiment and collected the movement trajectory as well as the facing direction (a set of coordinates and orientation information) of the participants by recording the sensing data of the VR device with given high frequency. 
+
+With these data, by setting the visual range (a pyramidal range within a given distance) of human naked eyes, we can define the effectiveness of a sign by measuring the seen time and the seen area. The escape sign surface is gridded with the center as the origin of coordinate axis and the density is adjustable. The seen area is computed by the number of grids in the visual range without any obstacles.
 
 We did a hierarchical judgement on the distance first to reduce the computation cost, then use Unity Engine ray-casting functions for detecting the collision, as well as calculation of included angle between the rays and the central Line of sight to determine the valid seen area. By the method provided, we can measure a sign's effectiveness. We also generated standard trajectory data files with anchored route by C++ scripts. To make the process more intuitive, we also developed visualization by utilizing line renderer. These data were also analyzed in depth using python scripts.
 
