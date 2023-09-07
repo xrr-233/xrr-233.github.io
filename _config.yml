@@ -25,6 +25,7 @@ plugins:
 ###############################################
 
 navbar-links:
+  CV: "assets/files/CV.pdf"
   Contact me: "contact"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
