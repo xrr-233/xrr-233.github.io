@@ -1,13 +1,11 @@
 ---
-title: 3D Avatar Basic
+title: Rendering Real-world 3D Avatar with Focus on Hair and Skin
 excerpt: Exploration of physically-based human 3D Avatar rendering.
-tags: [Unity, Rendering]
+tags: [Unity, Rendering, Reconstruction]
 thumbnail-img: /assets/img/2023-11-30-3d-avatar.gif
+category: project
+mathjax: true
 ---
-
-*Actual post date: 12/03/2023*
-
-*Last modified: 12/03/2023*
 
 ![](/assets/img/2023-11-30-3d-avatar.gif)
 

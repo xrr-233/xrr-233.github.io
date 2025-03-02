@@ -1,13 +1,11 @@
 ---
 title: Textured-NeuS
 excerpt: An extension of NeuS - when exporting the mesh, the color of the vertices will also be given
-tags: [3D Reconstruction, Texture, NeRF, SDF]
+tags: [Reconstruction, Texture, NeRF, SDF]
+# cover-img: /assets/img/2023-04-15-example.png
 thumbnail-img: /assets/img/2023-04-15-example.png
+category: project
 ---
-
-*Actual post date: 08/20/2023*
-
-*Last modified: 08/20/2023*
 
 ![](/assets/img/2023-04-15-example.png)
 

@@ -1,34 +1,86 @@
----
-layout: null
----
-
 @font-face {
-  font-family: TNO;
-  src: url("../font/FZRuiZHJW_Zhun.TTF");
+  font-family: 'TFR';
+  src: url("../font/VCR_OSD_MONO_1.001.ttf");
 }
 
 @font-face {
-  font-family: TNO-bold;
-  src: url("../font/FZRuiZHJW_Zhong.TTF");
+  font-family: 'TNO Plain Text';
+  src: url("../font/Aldrich-Regular.ttf");
 }
 
-body {
-  font-family: 'Lora', 'Times New Roman', serif;
+@font-face {
+  font-family: 'TNO Superevent';
+  src: url("../font/BOMBARD_.ttf");
 }
+
+:root {
+  --body-font: 'TNO Plain Text';
+  --header-font: 'TNO Superevent';
+}
+
 h1,h2,h3,h4,h5,h6 {
-  font-family: TNO-bold, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white
+}
+  
+hr {
+  border: 1px solid var(--navbar-border-col) !important;
+}
+  
+p {
+  text-align: justify;
 }
 
-blockquote {
-  font-family: 'Lora', 'Times New Roman', serif;
-  border-left-style: solid;
-  border-left-width: 5px;
-  border-left-color: {{ site.navbar-border-col | default: "#59c7c2" }};
-  padding-left: 1em;
+.home-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-image-container img {
+  height: 100px;
+  width: auto;
+}
+
+.home-image-container .separator {
+  width: 1px;
+  height: 100px;
+  background-color: var(--navbar-border-col)
+}
+
+.tfr-title {
+  font-family: 'TFR';
+}
+
+.page-subheading, .post-subheading {
+  font-family: 'TNO Plain Text' !important;
+  font-size: 1.25rem !important;
 }
 
 .post-preview {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: {{ site.navbar-border-col | default: "#59c7c2" }};
+  border: 1px solid var(--navbar-border-col) !important;
+  padding: 1rem 1rem;
+  margin-bottom: 5px;
+}
+
+.post-preview .post-desc {
+  display: grid;
+}
+
+.post-preview .post-image-short {
+  margin-top: 0;
+}
+
+.post-preview .post-title, .post-preview .post-subtitle {
+  font-size: 1.25rem;
+}
+
+.post-preview .post-title:hover {
+    color: #e08282;
+}
+
+.post-preview .post-excerpt {
+  border-left: 5px solid var(--navbar-border-col);
+  text-align: justify;
+  padding-left: 0.625em;
 }

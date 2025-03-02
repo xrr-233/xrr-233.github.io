@@ -3,11 +3,8 @@ title: Poo Poo Bird
 excerpt: A computer/mobile game developed with controller, sound, collider and interaction.
 tags: [Mobile, Unity]
 thumbnail-img: /assets/img/2021-01-30-poo_poo_bird.jpg
+category: project
 ---
-
-*Actual post date: 08/28/2023*
-
-*Last modified: 08/28/2023*
 
 ![](/assets/img/2021-01-30-poo_poo_bird.jpg)
 

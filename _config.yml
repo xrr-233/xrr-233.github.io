@@ -9,13 +9,12 @@
 # --- Required options --- #
 ############################
 
+# Name of website
 title: Xrr-233's Webpage
+
+# Your name to show in the footer
 author: xrr-233
 favicon: "assets/favicon.ico"
-remote_theme: daattali/beautiful-jekyll@6.0.1
-
-plugins:
-    - jekyll-include-cache
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -23,11 +22,9 @@ plugins:
 
 navbar-links:
   CV: "assets/files/CV.pdf"
-  Contact me: "contact"
-#  Resources:
-#    - Beautiful Jekyll: "https://beautifuljekyll.com"
-#    - Learn markdown: "https://www.markdowntutorial.com/"
-#  Author's home: "https://deanattali.com"
+  Resources:
+    - LinkedIn: "https://www.linkedin.com/in/ruixu33/?locale=en_US"
+    - GitHub: "https://github.com/xrr-233"
 
 ################
 # --- Logo --- #
@@ -44,63 +41,89 @@ round-avatar: true
 # then specify the following parameter
 #title-img: /path/to/image
 
+
 #####################################
 # --- Footer social media links --- #
 #####################################
 
 # Select the social network links that you want to show in the footer.
 # You can change the order that they show up on the page by changing the order here.
-# For details, please find "_include > social-networks-links.html"
+# Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "rxu17988@usc.edu"
-#  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  # rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  # facebook: deanattali
   github: xrr-233
-#  bilibili, zhihu, csdn
-#  reddit: yourname
-  steam: 76561198969251338
-#  ORCID: your ORCID ID
-#  google-scholar: your google scholar
-#  discord: "invite_code" or "users/userid" or "invite/invite_code"
+  # twitter: daattali
+  # patreon: DeanAttali
+  # youtube: "@daattali"
+  # whatsapp: 15551212
+  #  medium: yourname
+  #  reddit: yourname or r/yoursubreddit
+  linkedin: ruixu33
+  #  xing: yourname
+  #  stackoverflow: "3943160/daattali"
+  #  snapchat: deanat78
+  #  instagram: deanat78
+  #  spotify: yourname
+  #  telephone: +14159998888
+  #  steam: deanat78
+  #  twitch: yourname
+  #  yelp: yourname
+  #  telegram: yourname
+  #  calendly: yourname
+  #  mastodon: instance.url/@username
+  #  bluesky: yourname
+  ORCID: 0009-0004-4906-5275
+  google-scholar: fr8ruhsAAAAJ
+  #  discord: "invite_code" or "users/userid" or "invite/invite_code"
+  #  kaggle: yourname
+  #  hackerrank: yourname
+  #  gitlab: yourname
+  #  itchio: yourname
+  #  untappd: yourname
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-#rss-description: This website is a virtual proof that I'm awesome
-
+rss-description: This website is a virtual proof that I'm awesome
 
 ###########################
 # --- General options --- #
 ###########################
 
 # Select which social network share links to show in posts
-#share-links-active:
-#  twitter: true
-#  facebook: true
-#  linkedin: true
-#  vk: false
-#
-## How to display the link to your website in the footer
-## Remove this if you don't want a link in the footer
-#url-pretty: "MyWebsite.com"
-#
-## Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-#excerpt_length: 50
-#
-## Whether or not to show an excerpt for every blog post in the feed page
-#feed_show_excerpt: true
-#
-## Whether or not to show a list of tags below each post preview in the feed page
-#feed_show_tags: true
-#
-## Add a search button to the navbar
-#post_search: true
-#
-## Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
-#edit_page_button: true
-#
-## Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
-## If this setting is off, then long sub-menu words might get cut off
-## See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
-#navbar-var-length: false
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+  vk: false
+
+# How to display the link to your website in the footer
+# Remove this if you don't want a link in the footer
+url-pretty: "xrr-233.github.io"
+
+# Add the website title to the title of every page
+title-on-all-pages: true
+
+# Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
+excerpt_length: 50
+
+# Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
+
+# Whether or not to show a list of tags below each post preview in the feed page
+feed_show_tags: true
+
+# Add a search button to the navbar
+post_search: true
+
+# Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
+edit_page_button: true
+
+# Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
+# If this setting is off, then long sub-menu words might get cut off
+# See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
+navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
@@ -111,18 +134,17 @@ social-network-links:
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-#navbar-col: "#EAEAEA"
+page-col: "#061017"
+text-col: "#a7bcb6"
+link-col: "#e08282"
+hover-col: "#59c7c2"
+navbar-col: "#EAEAEA"
 navbar-text-col: "#59c7c2"
 navbar-border-col: "#59c7c2"
-page-col: "#061017"
-text-col: "#b2c9c2"
-link-col: "#008aff"
-hover-col: "#ff0000"
 footer-col: "#061017"
-footer-text-col: "#b2c9c2"
-footer-link-col: "#4008aff"
-footer-hover-col: "#ff0000"
-footer-border-col: "#59c7c2"
+footer-text-col: "#a7bcb6"
+footer-link-col: "#e08282"
+footer-hover-col: "#59c7c2"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -141,7 +163,6 @@ site-css:
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
 #  - "/assets/js/custom-script.js"
-
 
 #################################
 # --- Web Analytics Section --- #
@@ -231,3 +252,51 @@ date_format: "%B %-d, %Y"
 
 # Facebook App ID
 #fb_app_id: ""
+
+#################################################################################
+# --- You don't need to touch anything below here (but you can if you want) --- #
+#################################################################################
+
+# Output options (more information on Jekyll's site)
+timezone: "America/Toronto"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+
+# Exclude these files from production site
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - docs/
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189
+
