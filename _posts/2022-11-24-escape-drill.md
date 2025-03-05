@@ -1,7 +1,7 @@
 ---
 title: Escape Drill
 excerpt: A simulated experiment to investigate human behavior during evacuation.
-tags: [VR/AR, HCI, Unity]
+tags: [Unity, VR/AR, HCI]
 thumbnail-img: /assets/img/2022-11-24-escape-drill-teaser.png
 category: project
 ---
