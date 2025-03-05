@@ -28,7 +28,8 @@ bundle install
 #### Start local test (preview)
 
 ```shell
-bundler exec jekyll serve
+jekyll build
+jekyll serve
 ```
 
 ## Reference/Acknowledgement

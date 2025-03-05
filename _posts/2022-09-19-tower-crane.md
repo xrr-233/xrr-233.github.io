@@ -1,6 +1,6 @@
 ---
 title: Tower Crane
-excerpt: A virtual scene built for further experiment of interface for on-site construction
+excerpt: A virtual scene built for further experiment of interface for on-site construction.
 tags: [VR/AR, HCI, Unity]
 thumbnail-img: /assets/img/2022-09-19-crane_teaser.png
 category: project
